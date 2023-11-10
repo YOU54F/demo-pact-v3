@@ -14,7 +14,8 @@ dependencies {
   implementation("org.springframework:spring-web")
   implementation("org.springframework:spring-webmvc")
 
-  testImplementation("au.com.dius.pact.provider:junit5spring:4.2.6")
+  // testImplementation("au.com.dius.pact.provider:junit5spring:4.2.6")
+  testImplementation("au.com.dius.pact.provider:junit5spring:4.6.3")
   testImplementation("org.springframework:spring-test")
 
   testImplementation("org.junit.jupiter:junit-jupiter-api")
