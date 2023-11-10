@@ -19,7 +19,7 @@ public class TestHttpController {
   public TestObject test() {
     TestObject testObject = new TestObject();
     // testObject.setLastResponse(LocalDateTime.parse("2021-05-10T16:40:55"));
-    testObject.setLastResponse("2023-11-10T14:03:53123456");
+    testObject.setLastResponse("2023-11-10T14:03:53");
     // testObject.setLastResponse("2021-05-10T16:40:55");
     return testObject;
   }
