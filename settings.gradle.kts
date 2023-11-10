@@ -1,7 +1,7 @@
 rootProject.name = "huehnerlady-pact-demo"
 include(
   "consumer-working-pact-contracttests",
-    // "provider"
+  "provider"
 )
 
 fun Settings.property(key: String): String =

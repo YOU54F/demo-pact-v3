@@ -26,7 +26,7 @@ dependencies {
 
 tasks {
   withType<Test> {
-    dependsOn(":consumer-working-pact-contracttests:test")
+    // dependsOn(":consumer-working-pact-contracttests:test")
     useJUnitPlatform()
   }
 }
