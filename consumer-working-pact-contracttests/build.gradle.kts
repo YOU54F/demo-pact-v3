@@ -13,7 +13,8 @@ dependencies {
   testImplementation(libs.springSecurityCore)
   testImplementation(libs.commonsLang)
 
-  testImplementation("au.com.dius.pact.consumer:junit5:4.1.34")
+  // testImplementation("au.com.dius.pact.consumer:junit5:4.1.34")
+  testImplementation("au.com.dius.pact.consumer:junit5:4.6.3")
   testImplementation(libs.bundles.junitJupiter)
   testImplementation(libs.bundles.mockito)
   testImplementation(libs.assertj)
@@ -27,6 +28,6 @@ tasks {
   withType<Test> {
     useJUnitPlatform()
     systemProperty("pact_do_not_track", true)
-    systemProperty("pact.rootDir", "$rootDir/provider/src/test/resources/pacts")
+    systemProperty("pact.rootDir", "$rootDir/pacts/")
   }
 }

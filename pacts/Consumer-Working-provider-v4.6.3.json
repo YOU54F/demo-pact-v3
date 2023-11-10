@@ -1,0 +1,58 @@
+{
+  "consumer": {
+    "name": "Consumer-Working"
+  },
+  "interactions": [
+    {
+      "description": "consumer-test",
+      "request": {
+        "method": "GET",
+        "path": "/test"
+      },
+      "response": {
+        "body": {
+          "lastResponse": "2022-03-18T09:23:54"
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$.lastResponse": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "format": "yyyy-MM-dd'T'HH:mm:ss",
+                  "match": "timestamp"
+                }
+              ]
+            }
+          },
+          "header": {
+            "Content-Type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "application/json(;\\s?charset=[\\w\\-]+)?"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-jvm": {
+      "version": "4.6.3"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "provider"
+  }
+}
